@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use("/api",indexRoutes);
 
-app.post('/send-email', async (req, res) => {
+app.post('/api/send-email', async (req, res) => {
   const { to, subject, html } = req.body;
   
   try {

@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use("/api", index_1.default);
-app.post('/send-email', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+app.post('/api/send-email', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { to, subject, html } = req.body;
     try {
         yield (0, emailService_controller_1.sendEmail)(to, subject, html);
